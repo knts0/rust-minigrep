@@ -20,11 +20,11 @@ struct Config {
 }
 
 fn parse_config(args: &[String]) -> Config {
-    let query = &args[1];
-    let filename = &args[2];
+    let query = args[1].clone();
+    let filename = args[2].clone();
 
     Config {
-        query: String::from(query),
-        filename: String::from(filename),
+        query,
+        filename,
     }
 }
